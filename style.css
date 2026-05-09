@@ -4,7 +4,7 @@
 
 .bg-rocky {
   background-color: #0d0a08;
-  background-image: linear-gradient(rgba(13, 10, 8, 0.94), rgba(13, 10, 8, 0.96)), url('./images/mud_glass_texture.png');
+  background-image: linear-gradient(rgba(13, 10, 8, 0.75), rgba(13, 10, 8, 0.80)), url('./images/mud_glass_texture.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -12,7 +12,7 @@
 
 .bg-mud {
   background-color: #0d0a08;
-  background-image: linear-gradient(rgba(13, 10, 8, 0.65), rgba(13, 10, 8, 0.80)), url('./images/mud_texture.png');
+  background-image: linear-gradient(rgba(13, 10, 8, 0.45), rgba(13, 10, 8, 0.60)), url('./images/mud_texture.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
