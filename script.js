@@ -1,20 +1,29 @@
-// Initialize Lucide icons
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lucide icons safely
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  } else {
+    console.warn('Lucide icons failed to load.');
+  }
 
-// Dynamic year
-document.getElementById('year').textContent = new Date().getFullYear();
+  // Dynamic year
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+});
 
 // Header scroll effect
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('bg-slate-950/95', 'backdrop-blur-md', 'border-slate-800', 'shadow-lg');
-    header.classList.remove('border-transparent');
-  } else {
-    header.classList.remove('bg-slate-950/95', 'backdrop-blur-md', 'border-slate-800', 'shadow-lg');
-    header.classList.add('border-transparent');
-  }
-});
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('bg-slate-950/95', 'backdrop-blur-md', 'border-slate-800', 'shadow-lg');
+      header.classList.remove('border-transparent');
+    } else {
+      header.classList.remove('bg-slate-950/95', 'backdrop-blur-md', 'border-slate-800', 'shadow-lg');
+      header.classList.add('border-transparent');
+    }
+  });
+}
 
 // Mobile menu toggle
 const mobileBtn = document.getElementById('mobile-menu-btn');
