@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-rocky {
+  background-color: #0d0a08;
+  background-image: linear-gradient(rgba(13, 10, 8, 0.94), rgba(13, 10, 8, 0.96)), url('./images/mud_glass_texture.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-mud {
+  background-color: #0d0a08;
+  background-image: linear-gradient(rgba(13, 10, 8, 0.65), rgba(13, 10, 8, 0.80)), url('./images/mud_texture.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Wiper Effect Carousel */
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 0;
+}
+
+.carousel-img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+@keyframes wiperInLeftToRight {
+  0% { clip-path: polygon(-20% 0, -20% 0, -40% 100%, -40% 100%); z-index: 2; opacity: 1; }
+  100% { clip-path: polygon(0 0, 140% 0, 120% 100%, -20% 100%); z-index: 2; opacity: 1; }
+}
+
+@keyframes wiperInRightToLeft {
+  0% { clip-path: polygon(120% 0, 120% 0, 140% 100%, 140% 100%); z-index: 2; opacity: 1; }
+  100% { clip-path: polygon(-20% 0, 100% 0, 120% 100%, -20% 100%); z-index: 2; opacity: 1; }
+}
+
+.carousel-img.wiper-next {
+  animation: wiperInLeftToRight 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.carousel-img.wiper-prev {
+  animation: wiperInRightToLeft 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Optional Blade Line */
+.wiper-blade {
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  width: 10px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);
+  z-index: 10;
+  transform-origin: bottom center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes bladeLeftToRight {
+  0% { transform: translateX(-50px) rotate(-15deg); opacity: 1; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(1100px) rotate(15deg); opacity: 0; }
+}
+
+@keyframes bladeRightToLeft {
+  0% { transform: translateX(1100px) rotate(15deg); opacity: 1; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(-50px) rotate(-15deg); opacity: 0; }
+}
+
+.carousel-wrapper.wiping-next .wiper-blade {
+  animation: bladeLeftToRight 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.carousel-wrapper.wiping-prev .wiper-blade {
+  animation: bladeRightToLeft 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}

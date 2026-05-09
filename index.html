@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rio Todo Terreno | Capacitação Off-Road Corporativa</title>
+  <meta name="description"
+    content="Projetamos, treinamos e operamos experiências off-road para empresas que não podem falhar.">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+
+<body class="bg-rocky text-rtt-sand-100 font-sans antialiased selection:bg-rtt-orange-500/30 selection:text-rtt-white">
+
+  <!-- HEADER -->
+  <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-2 text-xl font-extrabold text-rtt-white tracking-tight">
+          <img src="images/logo.png" alt="Rio Todo Terreno" class="h-10">
+          <span>RTT</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#servicos"
+            class="text-sm font-medium text-rtt-sand-200 hover:text-rtt-white transition-colors">Serviços</a>
+          <a href="#para-quem" class="text-sm font-medium text-rtt-sand-200 hover:text-rtt-white transition-colors">Para
+            Quem</a>
+          <a href="#diferenciais"
+            class="text-sm font-medium text-rtt-sand-200 hover:text-rtt-white transition-colors">Diferenciais</a>
+          <a href="#prova"
+            class="text-sm font-medium text-rtt-sand-200 hover:text-rtt-white transition-colors">Autoridade</a>
+          <a href="#contato"
+            class="text-sm font-medium text-rtt-white bg-rtt-orange-500 hover:bg-rtt-orange-500 px-5 py-2.5 rounded-none transition-colors">
+            Solicitar proposta
+          </a>
+        </nav>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-rtt-white hover:text-rtt-orange-400 transition-colors"
+          aria-label="Menu">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu"
+      class="hidden lg:hidden absolute top-full left-0 w-full bg-rtt-coal-950/98 backdrop-blur-xl border-b border-rtt-coal-800 p-6 flex-col gap-4 shadow-2xl">
+      <a href="#servicos"
+        class="text-base font-medium text-rtt-sand-100 hover:text-rtt-white py-2 border-b border-rtt-coal-800/50">Serviços</a>
+      <a href="#para-quem"
+        class="text-base font-medium text-rtt-sand-100 hover:text-rtt-white py-2 border-b border-rtt-coal-800/50">Para
+        Quem</a>
+      <a href="#diferenciais"
+        class="text-base font-medium text-rtt-sand-100 hover:text-rtt-white py-2 border-b border-rtt-coal-800/50">Diferenciais</a>
+      <a href="#prova"
+        class="text-base font-medium text-rtt-sand-100 hover:text-rtt-white py-2 border-b border-rtt-coal-800/50">Autoridade</a>
+      <a href="#contato"
+        class="inline-flex justify-center text-base font-semibold text-rtt-white bg-rtt-orange-500 hover:bg-rtt-orange-500 px-6 py-3 rounded-none transition-colors mt-2">
+        Solicitar proposta técnica
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <!-- Background Video -->
+      <video src="images/video-hero.mp4" autoplay loop muted playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0"></video>
+
+      <!-- Mud Overlay -->
+      <div class="absolute inset-0 bg-[#1a120c]/75 z-0"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0d0a08] via-transparent to-[#0d0a08]/80 z-0"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-16 lg:py-24">
+        <div class="max-w-4xl">
+          <div class="reveal">
+            <span
+              class="inline-block text-rtt-orange-400 font-semibold tracking-[0.15em] text-xs uppercase mb-6 border border-rtt-orange-400/20 px-3 py-1.5 rounded-none">
+              Operações Off-Road de Alta Exigência
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-rtt-white leading-[1.1] tracking-tight">
+              Domínio total em qualquer terreno.
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-rtt-sand-100 leading-relaxed max-w-2xl">
+              Projetamos, treinamos e operamos experiências off-road para empresas que não podem falhar.
+            </p>
+            <p class="mt-5 text-rtt-sand-200 border-l-2 border-rtt-orange-500 pl-5 max-w-2xl leading-relaxed">
+              Capacitação operacional, demonstrações veiculares e execução de projetos em ambientes extremos, com
+              segurança, controle e precisão.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="#contato"
+                class="inline-flex items-center justify-center px-8 py-4 bg-rtt-orange-500 hover:bg-rtt-orange-500 text-rtt-white font-semibold rounded-none transition-all duration-200 shadow-lg shadow-rtt-orange-500/20 hover:shadow-rtt-orange-500/30">
+                Solicitar proposta técnica
+              </a>
+              <a href="#contato"
+                class="inline-flex items-center justify-center px-8 py-4 border border-rtt-steel-600 hover:border-rtt-sand-200 text-rtt-white font-medium rounded-none transition-all duration-200 hover:bg-white/5">
+                Falar com um especialista
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-rtt-steel-500 font-medium">
+              Projetos personalizados para operações de alta exigência
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- POSICIONAMENTO -->
+    <section id="posicionamento" class="relative py-24 lg:py-32 bg-rtt-coal-900 border-y border-rtt-coal-800/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div class="lg:col-span-5 reveal">
+            <h2 class="text-3xl lg:text-5xl font-bold text-rtt-white leading-tight">
+              Não operamos veículos. Desenvolvemos capacidade.
+            </h2>
+          </div>
+          <div class="lg:col-span-7 reveal delay-100">
+            <p class="text-lg text-rtt-sand-100 leading-relaxed">
+              A RTT atua na preparação de equipes e na execução de operações em ambientes onde o erro não é uma opção.
+            </p>
+            <p class="mt-6 text-rtt-sand-200 leading-relaxed">
+              Nossos projetos integram técnica, metodologia e controle para garantir desempenho em terrenos adversos,
+              com foco em segurança, eficiência e previsibilidade operacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section id="para-quem" class="py-24 lg:py-32 bg-mud relative">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+          <h2 class="text-3xl lg:text-4xl font-bold text-rtt-white">
+            Soluções para operações críticas e ambientes de alta exigência
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6">
+          <!-- Card 1 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 group reveal">
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 group-hover:bg-rtt-orange-500/10 transition-colors">
+              <i data-lucide="building-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3">Empresas de engenharia e infraestrutura</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed">
+              Operações em áreas remotas, acesso técnico e mobilidade em terrenos complexos.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 group reveal delay-100">
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 group-hover:bg-rtt-orange-500/10 transition-colors">
+              <i data-lucide="leaf" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3">Agronegócio e grandes frotistas</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed">
+              Capacitação de equipes e otimização de desempenho em campo.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 group reveal delay-200">
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 group-hover:bg-rtt-orange-500/10 transition-colors">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3">Energia, telecom e redes de alta tensão</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed">
+              Acesso seguro a áreas críticas com padronização operacional.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 group reveal">
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 group-hover:bg-rtt-orange-500/10 transition-colors">
+              <i data-lucide="flame" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3">Mineração, óleo, gás e dutos</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed">
+              Treinamento para condução em ambientes severos e de risco.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 group reveal delay-100">
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 group-hover:bg-rtt-orange-500/10 transition-colors">
+              <i data-lucide="shield" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3">Forças de segurança e órgãos públicos</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed">
+              Preparação tática e condução sob condições extremas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-24 lg:py-32 bg-rtt-coal-900">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-24 lg:space-y-32">
+
+        <!-- Serviço 1 -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-1 lg:order-1 reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 bg-rtt-coal-800 rounded-none text-rtt-orange-400">
+                <i data-lucide="wrench" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs font-bold tracking-[0.15em] text-rtt-orange-400 uppercase">Treinamento</span>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold text-rtt-white mb-4">
+              Treinamento e Capacitação Off-Road
+            </h3>
+            <p class="text-lg text-rtt-sand-100 mb-8 leading-relaxed">
+              Preparação técnica para quem precisa operar com precisão em qualquer cenário.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Treinamento de condução 4x4</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Técnicas de segurança e mitigação de risco</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Padronização operacional de equipes</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Programas personalizados por tipo de operação</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Simulações em terreno real</span>
+              </li>
+            </ul>
+            <p class="text-rtt-white font-semibold mb-8 border-l-2 border-rtt-orange-500 pl-4">
+              Transformamos condutores em operadores preparados para ambientes críticos.
+            </p>
+            <a href="#contato"
+              class="inline-flex items-center justify-center px-8 py-4 bg-rtt-orange-500 hover:bg-rtt-orange-500 text-rtt-white font-semibold rounded-none transition-all duration-200 shadow-lg shadow-rtt-orange-500/20">
+              Estruturar capacitação
+            </a>
+            <p class="mt-3 text-sm text-rtt-steel-500 font-medium">
+              Avaliamos o cenário, o terreno e o objetivo da operação
+            </p>
+          </div>
+          <div class="order-2 lg:order-2 reveal delay-100">
+            <div class="relative group carousel-wrapper" data-carousel="auto">
+              <div class="absolute -inset-4 bg-rtt-orange-500/10 rounded-none blur-2xl"></div>
+              <div class="relative border border-rtt-coal-800 shadow-2xl h-[400px] w-full overflow-hidden bg-rtt-coal-950 carousel-inner">
+                <img src="images/treinamento/curso off road_011.JPG" alt="Treinamento 1" class="carousel-img active">
+                <img src="images/treinamento/curso off road_138.JPG" alt="Treinamento 2" class="carousel-img">
+                <img src="images/treinamento/curso off road_255.JPG" alt="Treinamento 3" class="carousel-img">
+                <img src="images/treinamento/curso off road_502.JPG" alt="Treinamento 4" class="carousel-img">
+                <img src="images/treinamento/curso off road_593.JPG" alt="Treinamento 5" class="carousel-img">
+                <div class="wiper-blade"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2 -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1 reveal delay-100">
+            <div class="relative group carousel-wrapper" data-carousel="auto">
+              <div class="absolute -inset-4 bg-rtt-orange-500/10 rounded-none blur-2xl"></div>
+              <div class="relative border border-rtt-coal-800 shadow-2xl h-[400px] w-full overflow-hidden bg-rtt-coal-950 carousel-inner">
+                <img src="images/demonstracao/DJI_0118.jpg" alt="Demonstração 1" class="carousel-img active">
+                <img src="images/demonstracao/DJI_0128.jpg" alt="Demonstração 2" class="carousel-img">
+                <img src="images/demonstracao/DJI_0137.jpg" alt="Demonstração 3" class="carousel-img">
+                <img src="images/demonstracao/IMGL5737.jpg" alt="Demonstração 4" class="carousel-img">
+                <img src="images/demonstracao/IMGL5752.jpg" alt="Demonstração 5" class="carousel-img">
+                <div class="wiper-blade"></div>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2 reveal">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 bg-rtt-coal-800 rounded-none text-rtt-orange-400">
+                <i data-lucide="car" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs font-bold tracking-[0.15em] text-rtt-orange-400 uppercase">Demonstração</span>
+            </div>
+            <h3 class="text-2xl lg:text-3xl font-bold text-rtt-white mb-4">
+              Demonstração Veicular e Experiências Técnicas
+            </h3>
+            <p class="text-lg text-rtt-sand-100 mb-8 leading-relaxed">
+              Execução completa de projetos para marcas que precisam provar performance em condições reais.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Test-drives técnicos</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Construção de pistas off-road</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Roteirização de experiências</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Lançamento de veículos</span>
+              </li>
+              <li class="flex items-start gap-3 text-rtt-sand-200">
+                <i data-lucide="check" class="w-5 h-5 text-rtt-orange-400 mt-0.5 shrink-0"></i>
+                <span>Eventos e ativações</span>
+              </li>
+            </ul>
+            <p class="text-rtt-white font-semibold mb-8 border-l-2 border-rtt-orange-500 pl-4">
+              Não demonstramos veículos. Validamos desempenho.
+            </p>
+            <a href="#contato"
+              class="inline-flex items-center justify-center px-8 py-4 bg-rtt-orange-500 hover:bg-rtt-orange-500 text-rtt-white font-semibold rounded-none transition-all duration-200 shadow-lg shadow-rtt-orange-500/20">
+              Planejar demonstração
+            </a>
+            <p class="mt-3 text-sm text-rtt-steel-500 font-medium">
+              Avaliamos o cenário, o terreno e o objetivo da operação
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="py-24 lg:py-32 bg-mud relative">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl lg:text-4xl font-bold text-rtt-white">
+            Rigor técnico aplicado à operação em campo
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6">
+          <!-- 01 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 relative overflow-hidden group reveal">
+            <span
+              class="absolute top-4 right-4 text-5xl font-extrabold text-rtt-coal-800/50 group-hover:text-rtt-orange-500/20 transition-colors">01</span>
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 relative z-10">
+              <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3 relative z-10">Metodologia estruturada</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed relative z-10">
+              Treinamentos e projetos baseados em processo, não improviso.
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 relative overflow-hidden group reveal delay-100">
+            <span
+              class="absolute top-4 right-4 text-5xl font-extrabold text-rtt-coal-800/50 group-hover:text-rtt-orange-500/20 transition-colors">02</span>
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 relative z-10">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3 relative z-10">Experiência em ambientes críticos</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed relative z-10">
+              Atuação com setores onde segurança e eficiência são inegociáveis.
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 relative overflow-hidden group reveal delay-200">
+            <span
+              class="absolute top-4 right-4 text-5xl font-extrabold text-rtt-coal-800/50 group-hover:text-rtt-orange-500/20 transition-colors">03</span>
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 relative z-10">
+              <i data-lucide="sliders" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3 relative z-10">Customização por operação</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed relative z-10">
+              Cada projeto é desenhado conforme o risco, terreno e objetivo.
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 relative overflow-hidden group reveal">
+            <span
+              class="absolute top-4 right-4 text-5xl font-extrabold text-rtt-coal-800/50 group-hover:text-rtt-orange-500/20 transition-colors">04</span>
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 relative z-10">
+              <i data-lucide="check-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3 relative z-10">Execução completa</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed relative z-10">
+              Do planejamento à operação em campo.
+            </p>
+          </div>
+
+          <!-- 05 -->
+          <div
+            class="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] bg-rtt-coal-900/40 border border-rtt-coal-800 p-8 hover:border-rtt-orange-500/40 transition-all duration-300 relative overflow-hidden group reveal delay-100">
+            <span
+              class="absolute top-4 right-4 text-5xl font-extrabold text-rtt-coal-800/50 group-hover:text-rtt-orange-500/20 transition-colors">05</span>
+            <div
+              class="w-12 h-12 bg-rtt-coal-800 rounded-none flex items-center justify-center text-rtt-orange-400 mb-6 relative z-10">
+              <i data-lucide="gauge" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-rtt-white mb-3 relative z-10">Foco em segurança e performance</h3>
+            <p class="text-sm text-rtt-sand-200 leading-relaxed relative z-10">
+              Redução de risco e aumento de controle operacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA / AUTORIDADE -->
+    <section id="prova" class="py-24 lg:py-32 bg-rtt-coal-900">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl lg:text-4xl font-bold text-rtt-white mb-4">
+            Confiança construída em campo
+          </h2>
+          <p class="text-rtt-sand-200 max-w-2xl mx-auto">
+            Empresas e instituições que operam em ambientes de alta exigência confiam na RTT para preparar equipes e
+            executar projetos com precisão.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 reveal">
+          <div class="bg-rtt-coal-800/40 border border-rtt-steel-700/50 p-8 text-center rounded-none">
+            <div class="text-5xl lg:text-6xl font-extrabold text-rtt-orange-400 mb-2 counter" data-target="500"
+              data-suffix="+">0+</div>
+            <div class="text-sm text-rtt-sand-200 font-medium uppercase tracking-wider">Equipes treinadas</div>
+          </div>
+          <div class="bg-rtt-coal-800/40 border border-rtt-steel-700/50 p-8 text-center rounded-none">
+            <div class="text-5xl lg:text-6xl font-extrabold text-rtt-orange-400 mb-2 counter" data-target="150"
+              data-suffix="+">0+</div>
+            <div class="text-sm text-rtt-sand-200 font-medium uppercase tracking-wider">Projetos executados</div>
+          </div>
+          <div class="bg-rtt-coal-800/40 border border-rtt-steel-700/50 p-8 text-center rounded-none">
+            <div class="text-5xl lg:text-6xl font-extrabold text-rtt-orange-400 mb-2 counter" data-target="15"
+              data-suffix="+">0+</div>
+            <div class="text-sm text-rtt-sand-200 font-medium uppercase tracking-wider">Anos de expertise</div>
+          </div>
+          <div class="bg-rtt-coal-800/40 border border-rtt-steel-700/50 p-8 text-center rounded-none">
+            <div class="text-5xl lg:text-6xl font-extrabold text-rtt-orange-400 mb-2 counter" data-target="98"
+              data-suffix="%">0%</div>
+            <div class="text-sm text-rtt-sand-200 font-medium uppercase tracking-wider">Padronização operacional</div>
+          </div>
+        </div>
+
+        <!-- Placeholder Logos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 reveal delay-100">
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="building" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Engenharia</span>
+          </div>
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="factory" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Infraestrutura</span>
+          </div>
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="fuel" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Mineração</span>
+          </div>
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Energia</span>
+          </div>
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="radio" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Telecom</span>
+          </div>
+          <div
+            class="h-20 bg-rtt-coal-800/30 border border-rtt-steel-700/40 rounded-none flex flex-col items-center justify-center gap-2 text-rtt-steel-500">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+            <span class="text-[10px] font-bold uppercase tracking-widest">Segurança</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contato" class="relative py-24 lg:py-32 bg-rtt-coal-950 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-rtt-orange-500/20 to-transparent"></div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-rtt-orange-500/5 rounded-none blur-3xl">
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 reveal">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-5xl font-bold text-rtt-white mb-6">
+            Seu projeto exige controle em terreno extremo?
+          </h2>
+          <p class="text-lg text-rtt-sand-100 max-w-2xl mx-auto leading-relaxed">
+            Vamos estruturar a solução ideal para sua operação, com foco em segurança, eficiência e resultado.
+          </p>
+        </div>
+
+        <form
+          class="max-w-xl mx-auto bg-rtt-coal-900/80 p-8 rounded-none border border-rtt-steel-700/50 shadow-2xl backdrop-blur-sm">
+          <div class="grid grid-cols-1 gap-6">
+            <div>
+              <label for="nome" class="block text-sm font-medium text-rtt-sand-200 mb-2">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome"
+                class="w-full px-4 py-3 bg-rtt-coal-950 border border-rtt-steel-700 rounded-none text-rtt-white focus:outline-none focus:border-rtt-orange-500 focus:ring-1 focus:ring-rtt-orange-500 transition-colors">
+            </div>
+            <div>
+              <label for="telefone" class="block text-sm font-medium text-rtt-sand-200 mb-2">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000"
+                class="w-full px-4 py-3 bg-rtt-coal-950 border border-rtt-steel-700 rounded-none text-rtt-white focus:outline-none focus:border-rtt-orange-500 focus:ring-1 focus:ring-rtt-orange-500 transition-colors">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-rtt-sand-200 mb-2">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com"
+                class="w-full px-4 py-3 bg-rtt-coal-950 border border-rtt-steel-700 rounded-none text-rtt-white focus:outline-none focus:border-rtt-orange-500 focus:ring-1 focus:ring-rtt-orange-500 transition-colors">
+            </div>
+            <div>
+              <label for="mensagem" class="block text-sm font-medium text-rtt-sand-200 mb-2">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Detalhes do projeto"
+                class="w-full px-4 py-3 bg-rtt-coal-950 border border-rtt-steel-700 rounded-none text-rtt-white focus:outline-none focus:border-rtt-orange-500 focus:ring-1 focus:ring-rtt-orange-500 transition-colors"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full py-4 bg-rtt-orange-500 hover:bg-rtt-orange-400 text-rtt-white font-bold text-lg rounded-none transition-all duration-200 shadow-xl shadow-rtt-orange-500/20 hover:shadow-rtt-orange-500/40 hover:-translate-y-0.5 mt-2">
+              Solicitar Contato
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-rtt-coal-950 border-t border-rtt-coal-900 py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 text-xl font-extrabold text-rtt-white tracking-tight">
+        <img src="images/logo.png" alt="Rio Todo Terreno" class="h-8">
+        <span>RTT</span>
+      </div>
+      <p class="text-rtt-steel-500 text-sm">
+        © <span id="year"></span> RTT. Todos os direitos reservados.
+      </p>
+      <div class="flex items-center gap-6 text-rtt-steel-500 text-sm">
+        <a href="#servicos" class="hover:text-rtt-orange-500 transition-colors">Capacitação</a>
+        <a href="#para-quem" class="hover:text-rtt-orange-500 transition-colors">Operações</a>
+        <a href="#diferenciais" class="hover:text-rtt-orange-500 transition-colors">Performance</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
