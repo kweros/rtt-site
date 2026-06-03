@@ -91,28 +91,53 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
-  // Form Submission Prevention
+  // Form Submission via FormSubmit AJAX
   const form = document.querySelector('form');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = e.target.querySelector('button');
       if (btn) {
         const originalText = btn.innerText;
         btn.innerText = 'Enviando...';
         btn.disabled = true;
-        setTimeout(() => {
-          btn.innerText = 'Recebido!';
-          btn.classList.add('bg-green-600');
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        data._captcha = "false";
+        data._subject = "Novo Contato - RTT Site";
+
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/projetos@rtt4x4.com.br', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+
+          if (response.ok) {
+            btn.innerText = 'Recebido!';
+            btn.classList.add('bg-green-600');
+            btn.classList.remove('bg-rtt-orange-500');
+            form.reset();
+          } else {
+            throw new Error('FormSubmit error');
+          }
+        } catch (error) {
+          console.error(error);
+          btn.innerText = 'Erro ao enviar';
+          btn.classList.add('bg-red-600');
           btn.classList.remove('bg-rtt-orange-500');
+        } finally {
           setTimeout(() => {
             btn.innerText = originalText;
             btn.disabled = false;
-            btn.classList.remove('bg-green-600');
+            btn.classList.remove('bg-green-600', 'bg-red-600');
             btn.classList.add('bg-rtt-orange-500');
-            e.target.reset();
           }, 3000);
-        }, 1500);
+        }
       }
     });
   }
