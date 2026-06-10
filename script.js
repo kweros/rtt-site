@@ -91,6 +91,27 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
+  // Telefone input mask
+  const phoneInput = document.getElementById('telefone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 11) value = value.slice(0, 11);
+      
+      if (value.length > 10) {
+        e.target.value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (value.length > 6) {
+        e.target.value = value.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+      } else if (value.length > 2) {
+        e.target.value = value.replace(/^(\d{2})(\d{0,4})$/, '($1) $2');
+      } else if (value.length > 0) {
+        e.target.value = value.replace(/^(\d{0,2})$/, '($1');
+      } else {
+        e.target.value = '';
+      }
+    });
+  }
+
   // Form Submission via FormSubmit AJAX
   const form = document.querySelector('form');
   if (form) {
